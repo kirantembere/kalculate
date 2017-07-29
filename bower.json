@@ -1,0 +1,19 @@
+{
+  "name": "kalculate",
+  "description": "kalculate",
+  "main": "server.js",
+  "authors": [
+    "tembere"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "express": "^4.15.3"
+  }
+}
