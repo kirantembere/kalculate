@@ -1,11 +1,18 @@
 ﻿<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml"  ng-app="kalculator">
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
-<body>
-    <p>Hello World!!!</p>
+<body ng-controller="mainCtrl" class="container">
+    <p></p>
+    <h1 class="text-center text-primary">{{pageHeader}}</h1>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
