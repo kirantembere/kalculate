@@ -9,9 +9,12 @@
             controller: 'emiTableCtrl',
             templateUrl: '/emi/emi.table.html',
             link: function (scope, ele, attrs, ctrl) {
-                if (scope.datasource) {
-                    scope.tableData = JSON.parse(scope.datasource);
-                }
+
+                scope.$watch('datasource', function (dt) {
+                    if (scope.datasource) {
+                        scope.tableData = JSON.parse(scope.datasource);
+                    } 
+                });
             }
         }
     };
