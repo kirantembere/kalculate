@@ -309,6 +309,13 @@
     <Compile Include="app\bower_components\jquery\src\var\support.js" />
     <Compile Include="app\bower_components\jquery\src\var\toString.js" />
     <Compile Include="app\bower_components\jquery\src\wrap.js" />
+    <Compile Include="app\emi\emi.dir.js" />
+    <Compile Include="app\emi\emi.svc.js">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\emi\emi.table.dir.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\index.js">
       <SubType>Code</SubType>
     </Compile>
@@ -506,6 +513,8 @@
     <Content Include="app\bower_components\jquery\LICENSE.txt" />
     <Content Include="app\bower_components\jquery\README.md" />
     <Content Include="app\bower_components\jquery\src\.eslintrc.json" />
+    <Content Include="app\emi\emi.html" />
+    <Content Include="app\emi\emi.table.html" />
     <Content Include="app\index.html">
       <SubType>Code</SubType>
     </Content>
@@ -620,6 +629,7 @@
     <Folder Include="app\bower_components\jquery\src\traversing\" />
     <Folder Include="app\bower_components\jquery\src\traversing\var\" />
     <Folder Include="app\bower_components\jquery\src\var\" />
+    <Folder Include="app\emi\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
