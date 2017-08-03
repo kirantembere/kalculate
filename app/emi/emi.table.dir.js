@@ -2,17 +2,22 @@
     function emiTableFunc() {
         return {
             restrict: 'E',
-            replace : true,
+            replace: true,
+            scope: {
+                datasource: '@'
+            },
             controller: 'emiTableCtrl',
             templateUrl: '/emi/emi.table.html',
             link: function (scope, ele, attrs, ctrl) {
-                console.log(scope)
-               
+                if (scope.datasource) {
+                    scope.tableData = JSON.parse(scope.datasource);
+                }
             }
         }
     };
 
     angular.module('kalculator')
-        .directive('emiKalculatorTable', [emiTableFunc])
-        .controller('emiTableCtrl', function () { });
+        .directive('emiTable', emiTableFunc)
+        .controller('emiTableCtrl', function () {
+        });
 })();
