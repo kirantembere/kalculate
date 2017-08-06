@@ -1,18 +1,24 @@
 ﻿<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml"  ng-app="kalculator">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="kalculator">
 <head>
     <meta charset="utf-8" />
     <title></title>
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="emi/emi.css" rel="stylesheet" />
 </head>
-<body ng-controller="mainCtrl" class="container">
-    <p></p>
-    <h1 class="text-center text-primary">{{pageHeader}}</h1>
-
+<body>
+    <h1 class="text-center text-info">EMI Calculator</h1>
+   <div class="row">
+       <emi-kalculator></emi-kalculator>
+   </div>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="index.js"></script>
+    <script src="emi/emi.svc.js"></script>
+    <script src="emi/emi.dir.js"></script>
+    <script src="emi/emi.table.dir.js"></script>
+    <script src="emi/emi.table.paginate.dir.js"></script>
 </body>
 </html>
