@@ -5,7 +5,8 @@
             replace: true,
             scope: {
                 notifyParent: '&filterTable',
-                noOfPages: '@'
+                noOfPages: '@',
+                currentPage: '=currentPage'
             },
             controller: 'emiTablePaginateCtrl',
             templateUrl: '/emi/emi.table.paginate.html',
@@ -14,14 +15,17 @@
                 scope.$watch('noOfPages', function (dt) {
                     scope.paginationNumbers = [];
                     nop = Number(scope.noOfPages);
+                    scope.cp = Number(scope.currentPage);
+
+                    scope.totalPages = Number(scope.noOfPages);
 
                     if (scope.noOfPages) {
                         for (var i = 1; i <= nop; i++) {
                             scope.paginationNumbers.push(i)
                         }
-
                         scope.paginateTable = function (currPage) {
-                            scope.notifyParent({ currPage: currPage });
+                            scope.cp = Number(currPage);
+                            scope.notifyParent({ currPage: scope.cp});
                         }
                     }
                 });
@@ -35,3 +39,4 @@
         .controller('emiTablePaginateCtrl', function () {
         })
 })();
+

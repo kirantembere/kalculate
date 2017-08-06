@@ -16,6 +16,7 @@
 
                 function filterTable(tbl, cp) {
                     scope.noOfPages = Math.ceil(tbl.length / scope.pageSize);
+                    scope.currentPage = cp || 1;
                     pageEnd = cp * scope.pageSize;
                     pageStart = pageEnd - scope.pageSize;
                     scope.tableData = tbl.slice(pageStart, pageEnd);
@@ -23,14 +24,14 @@
                 }
                 scope.$watch('datasource', function (dt) {
                     if (scope.datasource) {  
-                       // scope.tableData = JSON.parse(scope.datasource);
                         filterTable(JSON.parse(scope.datasource), currentPage);
                     }
-                });
 
-                scope.filterTableByCurrentPage = function (currPage) {
-                    filterTable(JSON.parse(scope.datasource), currPage);
-                }
+                    scope.filterTableByCurrentPage = function (currPage) {
+                        filterTable(JSON.parse(scope.datasource), currPage);
+                    }
+                });
+               
             }
         }
     };
@@ -38,10 +39,5 @@
     angular.module('kalculator')
         .directive('emiTable', emiTableFunc)
         .controller('emiTableCtrl', function () {
-        })
-        //.filter('myfilter', function () {
-        //    return function (items) {
-        //        console.log(items)
-        //    };
-        //});
+        });
 })();

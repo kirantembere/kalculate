@@ -1,13 +1,31 @@
-﻿<ul class="pagination">
-    <li>
-        <a href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-        </a>
-    </li>
-    <li ng-repeat="pageNum in paginationNumbers" ng-click="paginateTable(pageNum)"><a href="#">{{pageNum}}</a></li>
-    <li>
-        <a href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-        </a>
-    </li>
-</ul>
+﻿<div class="col-md-12 col-sm-12 col-xs-12">
+    <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous" ng-click="cp == 1 || paginateTable(cp = cp-1)">
+                <span aria-hidden="true">Previous</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span aria-hidden="true">{{cp}}/{{totalPages}}</span>
+            </a>
+        </li>
+        <!--<li ng-repeat="pageNum in paginationNumbers" ng-click="paginateTable(pageNum)">
+            <a href="#">{{pageNum}}</a>
+        </li>-->
+        <li>
+            <a href="#" aria-label="Next" ng-click="cp == totalPages || paginateTable(cp = cp+1)">
+                <span aria-hidden="true">Next</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="pagination pull-right">
+        <li>
+           <select class="form-control" ng-model="pageNum" ng-selected="pageNum" ng-change="paginateTable(pageNum)">
+               <option ng-repeat="pageNum in paginationNumbers" value="{{pageNum}}">
+                   {{pageNum}}
+               </option>
+           </select>
+        </li>
+    </ul>
+</div>

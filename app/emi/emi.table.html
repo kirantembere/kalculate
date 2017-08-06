@@ -1,4 +1,4 @@
-﻿<div>
+﻿<div class="col-md-12 col-sm-12 col-xs-12">
     <table class="table  table-hover table-striped table-responsive">
         <tr>
             <th><label class="label label-primary">Payment No</label></th>
@@ -17,5 +17,9 @@
             </tr>
         </tbody>
     </table>
-    <emi-table-pagination filter-table="filterTableByCurrentPage(currPage)" no-of-pages="{{noOfPages}}"></emi-table-pagination>
+    <emi-table-pagination 
+         filter-table="filterTableByCurrentPage(currPage)"
+         no-of-pages="{{noOfPages}}" 
+         current-page="currentPage">
+    </emi-table-pagination>
 </div>

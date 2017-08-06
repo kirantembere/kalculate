@@ -26,12 +26,15 @@
                     <span class="input-group-addon" id="noOfMonthsAddOn">months</span>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" ng-if="false">
                 <input type="button" class="btn btn-primary" value="Calculate" ng-click="calculateEMI()" />
             </div>
         </div>
     </div>
     <div ng-if="emiTable.length > 0">
-        <emi-table datasource="{{emiTable}}" page-size="10"></emi-table>
+        <emi-table 
+             datasource="{{emiTable}}" 
+             page-size="10">
+        </emi-table>
     </div>
 </form>
