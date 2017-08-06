@@ -514,6 +514,9 @@
     <Content Include="app\bower_components\jquery\LICENSE.txt" />
     <Content Include="app\bower_components\jquery\README.md" />
     <Content Include="app\bower_components\jquery\src\.eslintrc.json" />
+    <Content Include="app\emi\emi.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app\emi\emi.html" />
     <Content Include="app\emi\emi.table.html" />
     <Content Include="app\emi\emi.table.paginate.html" />
