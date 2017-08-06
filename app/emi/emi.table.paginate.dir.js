@@ -21,7 +21,9 @@
 
                     if (scope.noOfPages) {
                         for (var i = 1; i <= nop; i++) {
-                            scope.paginationNumbers.push(i)
+                            scope.paginationNumbers.push({
+                                id : i
+                            })
                         }
                         scope.paginateTable = function (currPage) {
                             scope.cp = Number(currPage);
@@ -29,7 +31,7 @@
                         }
                     }
                 });
-
+                scope.pageNum = { id : 1 };
             }
         }
     };

@@ -21,11 +21,12 @@
     </ul>
     <ul class="pagination pull-right">
         <li>
-           <select class="form-control" ng-model="pageNum" ng-selected="pageNum" ng-change="paginateTable(pageNum)">
-               <option ng-repeat="pageNum in paginationNumbers" value="{{pageNum}}">
-                   {{pageNum}}
-               </option>
-           </select>
+            <select class="form-control" 
+                    ng-model="pageNum" 
+                    value="{{pageNum.id}}" 
+                    ng-options="pageNum.id for pageNum in paginationNumbers track by pageNum.id" 
+                    ng-change="paginateTable(pageNum.id)">
+            </select>
         </li>
     </ul>
 </div>
