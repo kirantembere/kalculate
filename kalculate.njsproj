@@ -316,6 +316,7 @@
     <Compile Include="app\emi\emi.table.dir.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\emi\emi.table.paginate.dir.js" />
     <Compile Include="app\index.js">
       <SubType>Code</SubType>
     </Compile>
@@ -515,6 +516,7 @@
     <Content Include="app\bower_components\jquery\src\.eslintrc.json" />
     <Content Include="app\emi\emi.html" />
     <Content Include="app\emi\emi.table.html" />
+    <Content Include="app\emi\emi.table.paginate.html" />
     <Content Include="app\index.html">
       <SubType>Code</SubType>
     </Content>

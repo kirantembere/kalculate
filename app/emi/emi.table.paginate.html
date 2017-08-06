@@ -1,0 +1,13 @@
+﻿<ul class="pagination">
+    <li>
+        <a href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+    <li ng-repeat="pageNum in paginationNumbers" ng-click="paginateTable(pageNum)"><a href="#">{{pageNum}}</a></li>
+    <li>
+        <a href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+</ul>
