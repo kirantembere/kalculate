@@ -1,35 +1,53 @@
 ﻿<form novalidate name="emiForm">
-    <div class="col-md-4">
+    <div class="col-md-2">
         <div class="form-group">
-            <label>Loan Amount</label>
+            <label class="text-info">Loan Amount</label>
             <div class="input-group">
-                <input type="number" class="form-control" ng-change="calculateEMI()" ng-model="principalAmount" describedby="loanAmountAddOn" placeholder="Loan Amount" required />
+                <input type="number" class="form-control" ng-change="generateAmortizationTable()" ng-model="principalAmount" describedby="loanAmountAddOn" placeholder="Loan Amount" required />
                 <span class="input-group-addon" id="loanAmountAddOn">$</span>
             </div>
 
         </div>
         <div class="form-group">
-            <label>Rate of Interest</label>
+            <label class="text-info">Rate of Interest</label>
             <div class="input-group">
-                <input type="number" class="form-control" describedby="rateOfInterestAddOn" ng-change="calculateEMI()" ng-model="rateOfInterest" placeholder="Rate of Interest" required />
+                <input type="number" class="form-control" describedby="rateOfInterestAddOn" ng-change="generateAmortizationTable()" ng-model="rateOfInterest" placeholder="Rate of Interest" required />
                 <span class="input-group-addon" id="loanAmountAddOn">%</span>
             </div>
         </div>
         <div class="form-group">
-            <label>Tenure</label>
+            <label class="text-info">Period</label>
             <div class="input-group">
-                <input type="number" class="form-control" describedby="noOfMonthsAddOn" ng-change="calculateEMI()" ng-model="noOfMonths" placeholder="Tenure" required />
+                <input type="number" class="form-control" describedby="noOfMonthsAddOn" ng-change="generateAmortizationTable()" ng-model="noOfMonths" placeholder="Period" required />
                 <span class="input-group-addon" id="noOfMonthsAddOn">months</span>
             </div>
         </div>
         <div class="form-group" ng-if="false">
-            <input type="button" class="btn btn-primary" value="Calculate" ng-click="calculateEMI()" />
+            <input type="button" class="btn btn-primary" value="Calculate" ng-click="generateAmortizationTable()" />
         </div>
     </div>
-    <div ng-if="emiTable.length > 0" class="col-md-8">
-        <emi-table 
-             datasource="{{emiTable}}" 
-             page-size="10">
+    <div ng-if="emiTable.length > 0" class="col-md-6">
+        <emi-table datasource="{{emiTable}}"
+                   page-size="10">
         </emi-table>
+    </div>
+    <div class="col-md-4" ng-if="totalInterest > 0 && totalPayment  > 0">
+        <p></p>
+        <div class="col-md-4">
+            <emi-dashboard total-interest="{{totalInterest}}"
+                           total-payment="{{totalPayment}}"
+                           monthly-emi="{{monthlyEmi}}">
+            </emi-dashboard>
+        </div>
+
+        <div class="col-md-5 col-sm-6 col-xs-8 col-md-push-1">
+            <canvas id="pie" class="chart chart-pie"
+                    chart-data="data"
+                    chart-labels="labels"
+                    chart-options="options">
+            </canvas>
+            <p></p>
+            <h4 class="text-center"><p class="label label-primary">Pie Chart (Principal vs Interest)</p></h4>
+        </div>
     </div>
 </form>

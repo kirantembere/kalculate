@@ -1,5 +1,5 @@
 ﻿<div class="col-md-12 col-sm-12 col-xs-12">
-    <table class="table  table-hover table-responsive">
+    <table class="table table-hover table-responsive">
         <tr>
             <th><label class="text-info">Payment No</label></th>
             <th><label class="text-info"> Monthly EMI</label></th>
@@ -11,9 +11,9 @@
             <tr ng-repeat="ds in tableData">
                 <td>{{ds.month}}</td>
                 <td>{{ds.monthlyEmi}}$</td>
-                <td>{{ds.principalAmountLeft}}$</td>
-                <td>{{ds.principalAmountPaid}}$</td>
-                <td>{{ds.monthlyInterestPaidOnExistingPrincipalAmount}}$</td>
+                <td>{{ds.principalAmountLeft}} $</td>
+                <td>{{ds.principalAmountPaid}} $</td>
+                <td>{{ds.monthlyInterestPaidOnExistingPrincipalAmount}} $</td>
             </tr>
         </tbody>
     </table>

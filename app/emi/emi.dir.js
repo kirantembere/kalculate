@@ -13,19 +13,30 @@
 
                 scope.calculatorTitle = 'EMI Calculator';
 
-                scope.calculateEMI = function () {
+                scope.generateAmortizationTable = function () {
                     if (scope.emiForm.$valid) {
                         principalAmount = scope.principalAmount;
                         noOfMonths = scope.noOfMonths;
                         rateOfInterest = scope.rateOfInterest;
-                        scope.emiTable = emiCalculateService.calculateEMI(principalAmount, rateOfInterest, noOfMonths);
+
+                        var emiSvcResp = emiCalculateService.generateAmortizationTable(principalAmount, rateOfInterest, noOfMonths);
+                        scope.emiTable = emiSvcResp.emiTable;
+
+                        scope.totalInterest = emiSvcResp.totalInterest;
+                        scope.totalPayment = emiSvcResp.totalPayment;
+                        scope.monthlyEmi = emiSvcResp.monthlyEmi;
+
+                        var principalLoanAmountInPercentage = emiCalculateService.getPrinicipalAndInterestValuesForPieChart(principalAmount, scope.monthlyEmi, noOfMonths);
+                           
+                        scope.labels = ["Principal Loan", "Total Interest"];
+                        scope.data = [principalLoanAmountInPercentage, 100 - principalLoanAmountInPercentage];
                     }
-                }              
+                }
             }
         }
     };
 
     angular.module('kalculator')
         .directive('emiKalculator', ['emiCalculateService', emiKalFunc])
-        .controller('emiCtrl', function () {});
+        .controller('emiCtrl', function () { });
 })();
