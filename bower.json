@@ -18,5 +18,8 @@
     "angular": "^1.6.5",
     "jquery": "^3.2.1",
     "bootstrap": "^3.3.7"
+  },
+  "dependencies": {
+    "angular-chart.js": "^1.1.1"
   }
 }

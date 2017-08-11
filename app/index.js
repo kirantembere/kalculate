@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('kalculator', []);
+    angular.module('kalculator', ['chart.js']);
 })();
