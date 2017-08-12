@@ -33,14 +33,14 @@
     </div>
     <div class="col-md-4" ng-if="totalInterest > 0 && totalPayment  > 0">
         <p></p>
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-4 col-xs-4">
             <emi-dashboard total-interest="{{totalInterest}}"
                            total-payment="{{totalPayment}}"
                            monthly-emi="{{monthlyEmi}}">
             </emi-dashboard>
         </div>
 
-        <div class="col-md-5 col-sm-6 col-xs-8 col-md-push-1">
+        <div class="col-md-5 col-sm-3 col-xs-3 col-md-push-1">
             <canvas id="pie" class="chart chart-pie"
                     chart-data="data"
                     chart-labels="labels"
