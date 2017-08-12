@@ -8,7 +8,7 @@
                 pageSize: '@'
             },
             controller: 'emiTableCtrl',
-            templateUrl: '../../emi/emi.table.html',
+            templateUrl: '/app/emi/emi.table.html',
             link: function (scope, ele, attrs, ctrl) {
                 var pageStart,
                     pageEnd,
