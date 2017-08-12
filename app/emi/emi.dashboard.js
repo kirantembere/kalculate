@@ -9,7 +9,7 @@
                 monthlyEmi: '@'
             },
             controller: 'emiDashboardCtrl',
-            templateUrl: '/emi.dashboard.html'
+            templateUrl: '/kalculator/app/emi/emi.dashboard.html'
         }
     };
 
