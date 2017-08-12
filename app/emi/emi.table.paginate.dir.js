@@ -9,7 +9,7 @@
                 currentPage: '=currentPage'
             },
             controller: 'emiTablePaginateCtrl',
-            templateUrl: '/kalculator/app/emi/emi.table.paginate.html',
+            templateUrl: '../../../emi.table.paginate.html',
             link: function (scope, ele, attrs, ctrl) {
                 var nop;
                 scope.$watch('noOfPages', function (dt) {
