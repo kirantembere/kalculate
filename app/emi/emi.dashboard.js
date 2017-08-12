@@ -9,7 +9,7 @@
                 monthlyEmi: '@'
             },
             controller: 'emiDashboardCtrl',
-            templateUrl: 'emi.dashboard.html'
+            templateUrl: '/emi.dashboard.html'
         }
     };
 
