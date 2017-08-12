@@ -28,6 +28,7 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\angular-chart.min.js" />
     <Compile Include="app\bower_components\angular-chart.js\angular-chart.js" />
     <Compile Include="app\bower_components\angular-chart.js\dist\angular-chart.js" />
     <Compile Include="app\bower_components\angular-chart.js\dist\angular-chart.min.js" />
