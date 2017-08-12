@@ -28,7 +28,6 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app\angular-chart.min.js" />
     <Compile Include="app\bower_components\angular-chart.js\angular-chart.js" />
     <Compile Include="app\bower_components\angular-chart.js\dist\angular-chart.js" />
     <Compile Include="app\bower_components\angular-chart.js\dist\angular-chart.min.js" />
@@ -400,6 +399,7 @@
     <Compile Include="app\bower_components\jquery\src\var\support.js" />
     <Compile Include="app\bower_components\jquery\src\var\toString.js" />
     <Compile Include="app\bower_components\jquery\src\wrap.js" />
+    <Compile Include="app\emi\angular-chart.min.js" />
     <Compile Include="app\emi\emi.dashboard.js">
       <SubType>Code</SubType>
     </Compile>
@@ -411,9 +411,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\emi\emi.table.paginate.dir.js" />
-    <Compile Include="app\index.js">
-      <SubType>Code</SubType>
-    </Compile>
+    <Compile Include="app\emi\index.js" />
     <Compile Include="server.js" />
     <Content Include=".bowerrc" />
     <Content Include=".gitignore" />
@@ -777,9 +775,7 @@
     <Content Include="app\emi\emi.html" />
     <Content Include="app\emi\emi.table.html" />
     <Content Include="app\emi\emi.table.paginate.html" />
-    <Content Include="app\index.html">
-      <SubType>Code</SubType>
-    </Content>
+    <Content Include="app\emi\index.html" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
