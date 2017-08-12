@@ -4,7 +4,7 @@
             restrict: 'E',
             requires: 'ngModel',
             controller: 'emiCtrl',
-            templateUrl: 'emi.html',
+            templateUrl: '/emi.html',
             link: function (scope, ele, attrs, ctrl) {
 
                 var principalAmount,
